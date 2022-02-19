@@ -3,7 +3,7 @@ description=An wikipedia and brain dump for Jonathan Cox Software Engineer Devel
 date=2022-02-18
 @@@
 
-[<- back](wiki.jonathan-cox.dev)
+[<- back](https://wiki.jonathan-cox.dev)
 
 # First!
 
