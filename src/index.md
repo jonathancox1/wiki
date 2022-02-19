@@ -5,4 +5,6 @@ date=2022-02-18
 
 # Wiki
 
-A simple wiki/brain dump coming soon
+A brain dump of random thoughts and ideas
+
+**Entries**

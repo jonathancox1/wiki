@@ -8,13 +8,47 @@ const sitemap = [];
 
 async function build() {
   const files = await fs.readdir("./src");
+
+  // Generate SiteMap Links to each page
+  let linkBlock = `
+  `;
+
+  for (const page of files) {
+    if (page !== "assets" && page !== "index.md") {
+      const [path] = page.split(".");
+
+      let data = await fs.readFile(`./src/${page}`, "utf8");
+
+      const [meta] = data.split("@@@");
+
+      // Convert Meta tags to object
+      const metaObj = meta.split(/\n/).reduce((acc, el) => {
+        if (el.length) {
+          const [key, value] = el.split("=");
+          acc[key] = value.trim();
+        }
+        return acc;
+      }, {});
+
+      // Generate links to each article
+      linkBlock += `[${metaObj.title}](https://www.wiki.jonathan-cox.dev/${path}.html)  
+		`;
+    }
+  }
+
   for (const file of files) {
-    if (file !== "assets" && file !== "index") {
+    if (file !== "assets") {
       // Take first part of file name for html name (this will be the url)
       const [path] = file.split(".");
 
       // Read Markdown and generate HTML
-      const data = await fs.readFile(`./src/${file}`, "utf8");
+      let data = await fs.readFile(`./src/${file}`, "utf8");
+
+      // Generate links to each article
+      if (path === "index") {
+        data += linkBlock;
+      }
+
       const html = generateHtml(data, path);
 
       // Write HTML to file
