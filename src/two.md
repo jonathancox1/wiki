@@ -3,4 +3,6 @@ description=An wikipedia and brain dump for Jonathan Cox Software Engineer Devel
 date=2022-02-19
 @@@
 
+[<- back](https://wiki.jonathan-cox.dev)
+
 coming soon
