@@ -31,7 +31,7 @@ async function build() {
       }, {});
 
       // Generate links to each article
-      linkBlock += `[${metaObj.title}](https://wiki.jonathan-cox.dev${path}.html)  
+      linkBlock += `[${metaObj.title}](https://wiki.jonathan-cox.dev/${path}.html)  
 		`;
     }
   }
