@@ -24,10 +24,10 @@ index.js
 
 ## Getting Started
 
--   Clone https://github.com/rysolv/markdown_ssg
--   Create a new markdown file (or edit the `getting-started.md`) in the `src` folder
--   Include any images you want to use in the `src/assets` folder
--   Run `npm run build`
+- Clone https://github.com/rysolv/markdown_ssg
+- Create a new markdown file (or edit the `getting-started.md`) in the `src` folder
+- Include any images you want to use in the `src/assets` folder
+- Run `npm run build`
 
 This creates a `/build` directory, and populates it with HTML, CSS, and images from the `src` directory.
 The script also creates standard metatags for social links (native, OpenGraph, Twitter) and generates a `sitemap.xml`
@@ -111,11 +111,11 @@ In the spirit of deploying this in an afternoon, I went with [Netlify](https://w
 
 ### Deploy steps
 
--   Sign in to Netlify
--   Select `Import an Existing project`
--   Connect to a Git provider
--   Select the repo
--   Set the build step to `npm run build` and the publish directory to `/build`
--   Deploy Site!
+- Sign in to Netlify
+- Select `Import an Existing project`
+- Connect to a Git provider
+- Select the repo
+- Set the build step to `npm run build` and the publish directory to `/build`
+- Deploy Site!
 
 ![netlify settings](./assets/netlify.png)
